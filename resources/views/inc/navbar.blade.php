@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="Ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-     crossorigin="anonymous">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <title>{{('القران الكريم')}}</title>
-</head>
-<body>
+
 <section id="nav-bar" >
     <nav class="navbar navbar-expand-lg navbar-light ">
 <a class="navbar-brand" href="{{route('home')}}"><img src="{{asset('images/logo.webp')}}"></a>
+
+
 <div style="color:#fff;text-align:right;"><p  style="align:right;">برنامج</p>
   
   <p >تعليم القرآن الكريم</p></div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </button>
   
-
-
 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
 
@@ -44,11 +36,11 @@
       <button type="button" class="btn btn-warning dropdown-toggle" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {{ Auth::user()->name }} 
       </button>
-  <div class="dropdown-menu">
+  <div class="dropdown-menu warning">
     <a class="dropdown-item" href="{{ route('logout') }}"
     onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
-     {{ __('Logout') }}
+     {{ __('خروج') }}
      
  </a>
   </div>
@@ -73,4 +65,3 @@
 </nav>
 
 </section>
-</body></html>

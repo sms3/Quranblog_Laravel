@@ -4,8 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+        @if(auth()->user()->usertype=='admin')
+        <div><a href="{{route('admin.dashboard.index')}}"><button> رجوع</button></a></div>
+        @endif
             <div class="card">
-                <div class="card-header" style="text-align: center">
+                <div class="card-header text-center" >
                 	{{$posts->title}}
                 </div>
 
